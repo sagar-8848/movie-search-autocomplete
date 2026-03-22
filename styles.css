@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* APP CONTAINER */
+.app {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.search-header {
+  position: sticky;
+  top: 0;
+  /* background-color: #121212 */
+  z-index: 1000;
+  padding: 10px;
+}
+
+#movies {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.search-header {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* TITLE */
+h1 {
+  margin-bottom: 20px;
+}
+
+body.dark {
+  background-color: #121212;
+}
+
+body.dark .card-container {
+  background-color: #1f1f1f;
+  color: #e5e5e5;
+}
+
+body.dark .card-container:hover {
+  background-color: #2a2a2a;
+}
+
+body.dark .card-container.active {
+  background-color: #1e293b;
+  border-left: 4px solid #60a5fa;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card-container {
+    background-color: #1f1f1f;
+  }
+}
+/* INPUT */
+#searchInput {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* MOVIES GRID */
+#movies {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card-container {
+  background: #1c1c1c;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* HOVER EFFECT */
+.card-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* IMAGE */
+.card-container img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* TITLE TEXT */
+.card-container p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* EXTRA INFO */
+.card-container h2,
+.card-container h3,
+.card-container h4 {
+  font-size: 12px;
+  color: #ccc;
+  margin-bottom: 3px;
+}
+
+/* ? active : to highlight the selectedIndex  */
+.active {
+  border: 2px solid yellow;
+}
+
+.card-container {
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.card-container.active {
+  background-color: #1e293b;
+  border-left: 4px solid #60a5fa;
+}
